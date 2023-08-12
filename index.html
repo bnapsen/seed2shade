@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seed 2 Shade Native Plants LLC</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Default Light Theme */
+        :root {
+            --primary-bg: #2E7D32; /* Forest Green */
+            --secondary-bg: #81C784; /* Light Green */
+            --text-color: #1B5E20; /* Dark Green */
+            --btn-bg: #4CAF50; /* Button Green */
+            --btn-hover: #388E3C; /* Button Hover Green */
+            --neutral-bg: #FFFFFF; /* White */
+            --border-color: #C8E6C9; /* Very Light Green */
+        }
+
+        /* Dark Theme */
+        [data-theme="dark"] {
+            --primary-bg: #333333;
+            --secondary-bg: #555555;
+            --text-color: #FFFFFF;
+            --btn-bg: #555555;
+            --btn-hover: #777777;
+            --neutral-bg: #222222;
+            --border-color: #444444;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--neutral-bg);
+            color: var(--text-color);
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            background-color: var(--primary-bg);
+        }
+
+        #logo {
+            width: 100px;
+            margin-bottom: 10px;
+        }
+
+  /* Default mobile styles: navigation links stack vertically */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+nav a {
+    display: block;
+    text-align: center;
+    padding: 10px 20px; /* Padding to give button a larger clickable area */
+    background-color: var(--btn-bg);
+    color: var(--text-color);
+    text-decoration: none; /* Remove the underline */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+nav a:hover {
+    background-color: var(--btn-hover); /* Change color on hover */
+}
+
+nav a:active {
+    transform: scale(0.95); /* Slightly scale down the button when clicked */
+}
+
+/* Media query for larger screens (e.g., desktops) */
+@media (min-width: 768px) { /* Adjust 768px to whatever breakpoint you prefer */
+    nav ul {
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+    }
+}
+}
+
+        nav a:hover {
+            background-color: var(--btn-hover);
+        }
+
+        #hero {
+            position: relative;
+            text-align: center;
+            color: var(--neutral-bg);
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('bear.png') no-repeat center/cover;
+            padding: 60px 0;
+        }
+
+        #hero h1 {
+            font-weight: 600;
+            font-size: 2rem;
+        }
+
+        /* Picture Container */
+        .picture-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            padding: 20px;
+            background-color: var(--neutral-bg);
+        }
+
+        .picture-item {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .picture-description {
+            margin-top: 10px;
+            font-size: 0.9rem;
+            color: var(--text-color);
+        }
+
+        .picture-container img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .picture-container img:hover {
+            transform: scale(1.15);
+        }
+
+        /* Enhanced About Us Container */
+        .about-us-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 40px 20px;
+            background-color: var(--neutral-bg);
+            border-top: 5px solid var(--primary-bg);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .about-us-content {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .about-us-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .about-us-image img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Enhanced Contact Us Container */
+        .contact-us-container {
+            padding: 40px 20px;
+            background-color: var(--secondary-bg);
+            border-top: 1px solid var(--primary-bg);
+            border-bottom: 5px solid var(--primary-bg);
+            text-align: center;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: var(--neutral-bg);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .contact-form input[type="text"],
+        .contact-form input[type="email"],
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid var(--border-color);
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .contact-form button {
+            padding: 10px 20px;
+            background-color: var(--btn-bg);
+            color: var(--text-color);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .contact-form button:hover {
+            background-color: var(--btn-hover);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: var(--primary-bg);
+            color: var(--neutral-bg);
+        }
+
+        /* Dark Mode & Back to Top Button */
+        #darkModeToggle, #backToTop {
+            position: fixed;
+            bottom: 20px;
+            padding: 10px 20px;
+            background-color: var(--btn-bg);
+            color: var(--text-color);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            display: block; /* Display the button by default */
+        }
+
+        #darkModeToggle {
+            right: 20px;
+        }
+
+        #backToTop {
+            left: 20px; /* Adjusted to the left */
+        }
+
+        #darkModeToggle:hover, #backToTop:hover {
+            background-color: var(--btn-hover);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Seed 2 Shade Logo" id="logo">
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <h1>Let's Design a Pollinator-friendly Landscape while Saving Water</h1>
+    </section>
+
+    <section class="picture-container">
+        <div class="picture-item">
+            <img src="pine.png" alt="Description of Image 1">
+            <div class="picture-description">The Ponderosa Pine (Pinus ponderosa) rises majestically against the vast horizons of the West. Its bark, a tapestry of amber and gold, carries the unique aroma of sun-warmed vanilla. With slender, vibrant green needles that dance in the breeze, this towering tree is a testament to nature's grandeur. Rooted in arid landscapes, the Ponderosa stands resilient, its very presence echoing tales of time and the wilderness's enduring spirit. Beyond its visual splendor, its wood, rich and durable, has shaped both homes and histories. In the shadow of this pine, one feels the timeless embrace of the wild.</div>
+        </div>
+        <div class="picture-item">
+            <img src="cedar.png" alt="Description of Image 2">
+            <div class="picture-description">The Western Red Cedar (Thuja plicata) stands as a sentinel of the Pacific Northwest, its towering presence woven into the very fabric of the region's lush forests. With bark that peels away in textured, reddish-brown strips and fragrant, scale-like leaves, this evergreen is more than just a tree—it's a testament to nature's artistry. Often cloaked in a gentle mist, the cedar's boughs whisper tales of ancient times, when indigenous peoples revered it as the "Tree of Life." Its wood, resistant to decay, has been crafted into totem poles, canoes, and shelters, making the Western Red Cedar not just a symbol of the region's natural beauty, but also of its rich cultural heritage.</div>
+        </div>
+        <div class="picture-item">
+            <img src="tree.png" alt="Description of Image 3">
+            <div class="picture-description">The Serviceberry (Amelanchier alnifolia) paints a mesmerizing scene in the heart of nature's canvas. Not just a feast for the eyes with its delicate white blossoms, this plant is steeped in intriguing tales. Often dubbed the "saskatoon" after the Cree name for the berry, it's a nutritional powerhouse, packed with more protein than most fruits. Native American tribes revered it, not just for its taste but for its medicinal properties, using it to treat ailments from digestive disorders to pregnancy pains. As the blossoms give way to dark-blue berries, wildlife from birds to bears flock to partake in this natural banquet. Beyond its beauty, the Serviceberry is a testament to nature's generosity and the intricate tapestry of ecosystems.</div>
+        </div>
+		<div class="picture-item">
+            <img src="Bitterbrush.png" alt="Description of Image 4">           
+			<div class="picture-description">Amidst the rugged terrains of arid landscapes, the Bitterbrush (Purshia tridentata) stands as a beacon of resilience. Its three-tipped leaves, a unique signature, shimmer under the golden embrace of the setting sun. Come spring, the shrub bursts into a spectacle of tiny, fragrant yellow flowers, offering a stark contrast to the earthy tones around it. But it's beneath the surface where the Bitterbrush truly astonishes; its deep roots snake through the parched ground, drawing sustenance even in the harshest of droughts. This unassuming shrub is not just a survivor but a testament to nature's indomitable spirit in the face of adversity.</div>
+			</div>
+		<div class="picture-item">
+            <img src="mock.png" alt="Description of Image 3">
+            <div class="picture-description">In the gentle embrace of twilight, the Syringa, or Mock Orange (Philadelphus lewisii), unveils its magic. Clusters of creamy-white flowers, each with four delicate petals, come alive, filling the air with a heady citrus scent that mirrors true orange blossoms. As fireflies dance around these fragrant blooms, the ambiance is reminiscent of timeless summer evenings spent in nature's lap. In the distance, the soft murmur of a flowing stream pays homage to its native North American roots. More than just a shrub, the Mock Orange is a sensory journey, transporting one to moments of pure, nostalgic bliss.</div>
+			</div>
+    </section>
+   <section class="about-us-container">
+    <div class="about-us-content">
+        <h2>About Us</h2>
+        <p>Seed 2 Shade Native Plants LLC was founded by Thomias Stralser with a vision to design pollinator-friendly landscapes while conserving water. Our mission is to promote sustainable landscaping practices that not only beautify our surroundings but also contribute positively to the environment.</p>
+        <p>We believe in the power of native plants and their ability to create harmonious ecosystems. By choosing Seed 2 Shade, you're not just getting a landscape; you're investing in a greener future.</p>
+    </div>
+    <div class="about-us-image">
+        <img src="bear.png" alt="A photo representing Seed 2 Shade Native Plants LLC">
+    </div>
+</section>
+    <section class="contact-us-container">
+        <h2>Contact Us</h2>
+        <div class="contact-form">
+            <form action="path-to-your-email-processing-script.php" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Seed 2 Shade Native Plants LLC. All rights reserved.</p>
+    </footer>
+
+    <!-- Dark Mode Toggle Button -->
+    <button id="darkModeToggle">Toggle Dark Mode</button>
+    <button id="backToTop">Back to Top</button>
+
+    <script>
+        // Dark Mode Toggle
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        darkModeToggle.addEventListener('click', function() {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            if (currentTheme === 'dark') {
+                document.documentElement.setAttribute('data-theme', 'light');
+                darkModeToggle.innerText = "Toggle Dark Mode";
+            } else {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                darkModeToggle.innerText = "Toggle Light Mode";
+            }
+        });
+
+        // Back to Top Button
+        const backToTopButton = document.getElementById('backToTop');
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 300) {
+                backToTopButton.style.display = 'block';
+            } else {
+                backToTopButton.style.display = 'none';
+            }
+        });
+
+        backToTopButton.addEventListener('click', function() {
+            window.scrollTo(0, 0);
+        });
+    </script>
+</body>
+</html>
