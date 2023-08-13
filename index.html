@@ -50,43 +50,33 @@
             margin-bottom: 10px;
         }
 
-  /* Default mobile styles: navigation links stack vertically */
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
+          /* Default mobile styles: navigation links stack vertically */
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
 
-nav a {
-    display: block;
-    text-align: center;
-    padding: 10px 20px; /* Padding to give button a larger clickable area */
-    background-color: var(--btn-bg);
-    color: var(--text-color);
-    text-decoration: none; /* Remove the underline */
-    border-radius: 5px; /* Rounded corners */
-    transition: background-color 0.3s; /* Smooth transition for hover effect */
-}
+        nav a {
+            display: block;
+            text-align: center;
+            padding: 10px 20px; /* Padding to give button a larger clickable area */
+            background-color: var(--btn-bg);
+            color: var(--text-color);
+            text-decoration: none; /* Remove the underline */
+            border-radius: 5px; /* Rounded corners */
+            transition: background-color 0.3s; /* Smooth transition for hover effect */
+        }
 
-nav a:hover {
-    background-color: var(--btn-hover); /* Change color on hover */
-}
+        nav a:hover {
+            background-color: var(--btn-hover); /* Change color on hover */
+        }
 
-nav a:active {
-    transform: scale(0.95); /* Slightly scale down the button when clicked */
-}
-
-/* Media query for larger screens (e.g., desktops) */
-@media (min-width: 768px) { /* Adjust 768px to whatever breakpoint you prefer */
-    nav ul {
-        flex-direction: row;
-        justify-content: center;
-        gap: 20px;
-    }
-}
-}
+        nav a:active {
+            transform: scale(0.95); /* Slightly scale down the button when clicked */
+        }
 
         nav a:hover {
             background-color: var(--btn-hover);
@@ -95,7 +85,7 @@ nav a:active {
         #hero {
             position: relative;
             text-align: center;
-            color: var(--neutral-bg);
+            color: white;
             background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('bear.png') no-repeat center/cover;
             padding: 60px 0;
         }
@@ -141,7 +131,6 @@ nav a:active {
         /* Enhanced About Us Container */
         .about-us-container {
             display: flex;
-            flex-wrap: wrap;
             gap: 20px;
             padding: 40px 20px;
             background-color: var(--neutral-bg);
@@ -150,18 +139,18 @@ nav a:active {
         }
 
         .about-us-content {
-            flex: 1;
+            text-align: justify;
             padding: 20px;
         }
 
         .about-us-image {
-            flex: 1;
+            align-items: center;
             display: flex;
             justify-content: center;
-            align-items: center;
         }
 
         .about-us-image img {
+            display: none;
             max-width: 100%;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -194,7 +183,7 @@ nav a:active {
         .contact-form input[type="text"],
         .contact-form input[type="email"],
         .contact-form textarea {
-            width: 100%;
+            width: 90%;
             padding: 10px;
             margin-bottom: 20px;
             border: 1px solid var(--border-color);
@@ -248,19 +237,35 @@ nav a:active {
         #darkModeToggle:hover, #backToTop:hover {
             background-color: var(--btn-hover);
         }
+        /* Media query for larger screens (e.g., desktops) */
+        @media (min-width: 600px) { /* Adjust 768px to whatever breakpoint you prefer */
+            .about-us-image {
+                max-width: 40%;
+            }
+
+            .about-us-image img {
+                display: revert;
+            }
+
+            nav ul {
+                flex-direction: row;
+                justify-content: center;
+                gap: 20px;
+            }
+        }
     </style>
 </head>
 <body>
     <header>
-        <img src="logo.png" alt="Seed 2 Shade Logo" id="logo">
+        <img src="logo.jpg" alt="Seed 2 Shade Logo" id="logo">
         <nav>
             <ul>
                 <li><a href="#">Home</a></li>
-                <li><a href="#">About Us</a></li>
+<!--                <li><a href="#">About Us</a></li>-->
                 <li><a href="#">Services</a></li>
                 <li><a href="#">Blog</a></li>
                 <li><a href="#">Shop</a></li>
-                <li><a href="#">Contact</a></li>
+<!--                <li><a href="#">Contact</a></li>-->
             </ul>
         </nav>
     </header>
